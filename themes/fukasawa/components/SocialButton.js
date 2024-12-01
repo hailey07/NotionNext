@@ -133,7 +133,7 @@ const SocialButton = () => {
             rel='noreferrer'
             title={'gumroad'}
             href={CONTACT_GUMROAD}>
-            <i className='transform hover:scale-125 duration-150 fab fa-google dark:hover:text-green-400 hover:text-green-600' />
+            <i className='transform hover:scale-125 duration-150 fa-regular fa-face-laugh-wink dark:hover:text-green-400 hover:text-green-600' />
           </a>
         )}
         {CONTACT_XIAOHONGSHU && (
