@@ -16,7 +16,7 @@ const Style = () => {
     
     /* fukasawa的首页响应式分栏 */
     #theme-fukasawa .grid-item {
-        height: auto;
+        height: 1000px;
         break-inside: avoid-column;
         margin-bottom: .5rem;
     }
@@ -37,8 +37,6 @@ const Style = () => {
         #theme-fukasawa .grid-container {
         column-count: 2;
         column-gap: .5rem;
-        row-count: 10;
-        row-gap: .5rem;
         }
     }
     
@@ -53,7 +51,6 @@ const Style = () => {
     .container {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: repeat(3, 1fr);
             grid-gap: 10px;
             padding: 10px;
         }
