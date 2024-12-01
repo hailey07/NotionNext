@@ -8,7 +8,7 @@ import BlogPostListEmpty from './BlogListEmpty';
 const BlogListScroll = ({ posts }) => {
   const { locale, NOTION_CONFIG } = useGlobal();
   const [page, setPage] = useState(1);
-  const POSTS_PER_PAGE = siteConfig('POSTS_PER_PAGE', 26, NOTION_CONFIG);
+  const POSTS_PER_PAGE = siteConfig('POSTS_PER_PAGE', null, NOTION_CONFIG);
   const [filterPostsGroups, setFilterPostsGroups] = useState([]);
 
   // 每页显示的文章数量
