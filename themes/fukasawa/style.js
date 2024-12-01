@@ -16,15 +16,9 @@ const Style = () => {
       
       /* fukasawa的首页响应式分栏 */
       #theme-fukasawa .grid-item {
-          height: 100px;
+          height: 130px;
           break-inside: avoid-column;
           margin-bottom: .5rem;
-      }
-      
-      /* 每页显示10行 */
-      #theme-fukasawa .grid-container {
-          max-height: 1000px; /* 10行 * 100px */
-          overflow-y: auto; /* 添加滚动条 */
       }
       
       /* 大屏幕（宽度≥1024px）下显示3列 */
@@ -51,12 +45,15 @@ const Style = () => {
           }
       }
   
-      .container {
-              display: grid;
-              grid-template-columns: repeat(3, 1fr);
-              grid-gap: 10px;
-              padding: 10px;
-          }
+
+    .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(10, auto); // 设置为10行
+            grid-gap: 10px;
+            padding: 10px;
+        }
+
   
     `}</style>
   }
