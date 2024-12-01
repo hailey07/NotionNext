@@ -49,7 +49,7 @@ const Style = () => {
     .container {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: repeat(10, auto); // 设置为10行
+            grid-template-rows: repeat(10, 1fr); // 设置行数为10
             grid-gap: 10px;
             padding: 10px;
         }
