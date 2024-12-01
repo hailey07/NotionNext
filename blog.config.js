@@ -90,10 +90,10 @@ const BLOG = {
   // 衬线字体 例如'"LXGW WenKai"'
   FONT_SERIF: [
     // '"LXGW WenKai"',
-    '"Noto Serif SC"',
     'Bitter',
     'SimSun',
     '"Times New Roman"',
+    '"Noto Serif SC"',
     'Times',
     'serif',
     '"Segoe UI Emoji"',
