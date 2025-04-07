@@ -19,6 +19,7 @@ const SocialButton = () => {
   const ENABLE_RSS = siteConfig('ENABLE_RSS')
   const CONTACT_BILIBILI = siteConfig('CONTACT_BILIBILI')
   const CONTACT_YOUTUBE = siteConfig('CONTACT_YOUTUBE')
+  const CONTACT_GUMROAD = siteConfig('CONTACT_GUMROAD')
 
   const CONTACT_XIAOHONGSHU = siteConfig('CONTACT_XIAOHONGSHU')
   const CONTACT_ZHISHIXINGQIU = siteConfig('CONTACT_ZHISHIXINGQIU')
@@ -53,6 +54,7 @@ const SocialButton = () => {
             <i className='transform hover:scale-125 duration-150 fab fa-twitter dark:hover:text-green-400 hover:text-green-600' />
           </a>
         )}
+        
         {CONTACT_TELEGRAM && (
           <a
             target='_blank'
@@ -123,6 +125,15 @@ const SocialButton = () => {
             title={'youtube'}
             href={CONTACT_YOUTUBE}>
             <i className='transform hover:scale-125 duration-150 fab fa-youtube dark:hover:text-green-400 hover:text-green-600' />
+          </a>
+        )}
+        {CONTACT_GUMROAD && (
+          <a
+            target='_blank'
+            rel='noreferrer'
+            title={'gumroad'}
+            href={CONTACT_GUMROAD}>
+            <i className='transform hover:scale-125 duration-150 fa-regular fa-face-laugh-wink dark:hover:text-green-400 hover:text-green-600' />
           </a>
         )}
         {CONTACT_XIAOHONGSHU && (
