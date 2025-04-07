@@ -127,13 +127,29 @@ const SocialButton = () => {
             <i className='transform hover:scale-125 duration-150 fab fa-youtube dark:hover:text-green-400 hover:text-green-600' />
           </a>
         )}
-        {CONTACT_GUMROAD && (
+         {CONTACT_GUMROAD && (
           <a
             target='_blank'
             rel='noreferrer'
             title={'gumroad'}
             href={CONTACT_GUMROAD}>
-            <i className='transform hover:scale-125 duration-150 fa-regular fa-face-laugh-wink dark:hover:text-green-400 hover:text-green-600' />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="transform hover:scale-125 duration-150 dark:hover:text-green-400 hover:text-green-600"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+              <path d="M21 12a9 9 0 1 1 -18 0a9 9 0 0 1 18 0z" />
+              <path d="M13.5 13h2.5v3" />
+              <path d="M15.024 9.382a4 4 0 1 0 -3.024 6.618c1.862 0 2.554 -1.278 3 -3" />
+            </svg>
           </a>
         )}
         {CONTACT_XIAOHONGSHU && (
