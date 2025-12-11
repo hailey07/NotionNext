@@ -23,11 +23,11 @@ const Style = () => {
   }
   
   #theme-simple .blog-item-title {
-    color: #276077;
+    color: #2d2d2d;
   }
   
   .dark #theme-simple .blog-item-title {
-    color: #d1d5db;
+    color: #f8f9fa;
   }
   
   .notion {
@@ -48,7 +48,7 @@ const Style = () => {
    
   #theme-simple .menu-link:hover {
       background-size: 100% 2px;
-      color: #dd3333;
+      color: #9775fa;
       cursor: pointer;
   }
   
