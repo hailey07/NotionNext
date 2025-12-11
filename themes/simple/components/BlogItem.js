@@ -51,35 +51,6 @@ export const BlogItem = props => {
           {/* 文章信息 */}
           <header className='mb-5 text-md text-gray-700 dark:text-gray-300 flex-wrap flex leading-6'>
             <div className='space-x-2'>
-<span>
-                <i className='fa-regular fa-user'></i>
-                {!showPreview && post.author && (
-                  <span className='inline-flex flex-wrap'>
-                    {/* 检查 post.author 是否为数组，并进行遍历 */}
-                    {Array.isArray(post.author) ? (
-                      post.author.map((authorName， index) => (
-                        <span key={index} className='flex items-center'>
-                          {/* 只有在不是第一个作者时才添加 / 分隔符 */}
-                          {index > 0 && <span className="mx-1 text-gray-400">/</span>}
-
-                          <SmartLink
-                            href={`/archive/${authorName}`}
-                            className='p-1 hover:text-red-400 transition-all duration-200'>
-                            {authorName}
-                          </SmartLink>
-                        </span>
-                      ))
-                    ) : (
-                      // 如果 post.author 不是数组（即只有一个作者的字符串情况）
-                      <SmartLink
-                        href={`/archive/${post.author}`}
-                        className='p-1 hover:text-red-400 transition-all duration-200'>
-                        {post.author}
-                      </SmartLink>
-                    )}
-                  </span>
-                )}
-              </span>
 
               <span>
                 <SmartLink
