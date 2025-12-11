@@ -54,9 +54,15 @@ export const BlogItem = props => {
               <span>
                 {' '}
                 <a
-                  href={siteConfig('SIMPLE_AUTHOR_LINK', null, CONFIG)}
+                  
                   className='p-1 hover:text-red-400 transition-all duration-200'>
-                  <i className='fa-regular fa-user'></i> {siteConfig('AUTHOR')}
+                    {!showPreview && (
+              <>
+                {post.author}
+                {post.author && <span>💗</span>}
+              </>
+            )}
+                  <i className='fa-regular fa-user'></i>
                 </a>
               </span>
               <span>
