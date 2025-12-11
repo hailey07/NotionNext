@@ -50,7 +50,12 @@ export const BlogItem = props => {
 
           {/* 文章信息 */}
           <header className='mb-5 text-md text-gray-700 dark:text-gray-300 flex-wrap flex leading-6'>
-
+            <div className='space-x-2'>
+              <span className='mr-2'>|</span>
+              <span className='mx-2  dark:text-gray-500'>
+                {locale.COMMON。LAST_EDITED_TIME}: {post?.lastEditedDay}
+              </span>
+            </div>
 
             <div>
               {post.category && (
@@ -58,13 +63,13 @@ export const BlogItem = props => {
                   {' '}
                   <span className='hover:text-red-400 transition-all duration-200'>
                     <i className='fa-regular fa-folder mr-0.5' />
-                    {post.category}
+                    {post。category}
                   </span>
                 </SmartLink>
               )}
-              {post?.tags &&
-                post?.tags?.length > 0 &&
-                post?.tags.map(t => (
+              {post?.标签 &&
+                post?.标签?.length > 0 &&
+                post?.标签.map(t => (
                   <SmartLink
                     key={t}
                     href={`/tag/${t}`}
