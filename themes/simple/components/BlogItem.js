@@ -53,18 +53,14 @@ export const BlogItem = props => {
             <div className='space-x-2'>
               <span>
                 {' '}
-                <a
-                  href={siteConfig('SIMPLE_AUTHOR_LINK', null, CONFIG)}
-                  className='p-1 hover:text-red-400 transition-all duration-200'>
-                 
-                </a>
+                
               </span>
               <span>
                 <SmartLink
                   className='p-1 hover:text-red-400 transition-all duration-200'
                   href={`/archive#${formatDateFmt(post?.publishDate, 'yyyy-MM')}`}>
                   <i className='fa-regular fa-clock' />{' '}
-                  {post。date?.start_date || post。createdTime}
+                  {post.date?.start_date || post.createdTime}
                 </SmartLink>
               </span>
               <span>
@@ -74,7 +70,7 @@ export const BlogItem = props => {
 
             <div>
               {post.category && (
-                <SmartLink href={`/category/${post。category}`} className='p-1'>
+                <SmartLink href={`/category/${post.category}`} className='p-1'>
                   {' '}
                   <span className='hover:text-red-400 transition-all duration-200'>
                     <i className='fa-regular fa-folder mr-0.5' />
@@ -83,7 +79,7 @@ export const BlogItem = props => {
                 </SmartLink>
               )}
               {post?.tags &&
-                post?.标签?.length > 0 &&
+                post?.tags?.length > 0 &&
                 post?.tags.map(t => (
                   <SmartLink
                     key={t}
