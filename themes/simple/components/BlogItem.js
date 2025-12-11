@@ -58,7 +58,6 @@ export const BlogItem = props => {
                   className='p-1 hover:text-red-400 transition-all duration-200'
                   href={`/archive#${formatDateFmt(post?.publishDate， 'yyyy-MM')}`}>
                   <i className='fa-regular fa-clock' />{' '}
-                  {/* 注意：此处已将 'post。date' 修正为 'post.date' */}
                   {post.date?.start_date || post.createdTime}
                 </SmartLink>
               </span>
@@ -68,12 +67,12 @@ export const BlogItem = props => {
             </div>
 
             <div>
-              {post.category && (
+              {post。category && (
                 <SmartLink href={`/category/${post。category}`} className='p-1'>
                   {' '}
                   <span className='hover:text-red-400 transition-all duration-200'>
                     <i className='fa-regular fa-folder mr-0.5' />
-                    {post.category}
+                    {post。category}
                   </span>
                 </SmartLink>
               )}
