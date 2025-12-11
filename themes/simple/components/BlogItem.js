@@ -51,7 +51,14 @@ export const BlogItem = props => {
           {/* 文章信息 */}
           <header className='mb-5 text-md text-gray-700 dark:text-gray-300 flex-wrap flex leading-6'>
             <div className='space-x-2'>
-
+              <span>
+                {' '}
+                <a
+                  href={siteConfig('SIMPLE_AUTHOR_LINK', null, CONFIG)}
+                  className='p-1 hover:text-red-400 transition-all duration-200'>
+                  <i className='fa-solid fa-wand-sparkles'></i> 
+                </a>
+              </span>
               <span>
                 <SmartLink
                   className='p-1 hover:text-red-400 transition-all duration-200'
@@ -60,12 +67,14 @@ export const BlogItem = props => {
                   {post。date?.start_date || post。createdTime}
                 </SmartLink>
               </span>
-
+              <span>
+                <TwikooCommentCount post={post} />
+              </span>
             </div>
 
             <div>
               {post。category && (
-                <SmartLink href={`/category/${post.category}`} className='p-1'>
+                <SmartLink href={`/category/${post。category}`} className='p-1'>
                   {' '}
                   <span className='hover:text-red-400 transition-all duration-200'>
                     <i className='fa-regular fa-folder mr-0.5' />
@@ -73,8 +82,8 @@ export const BlogItem = props => {
                   </span>
                 </SmartLink>
               )}
-              {post?.标签 &&
-                post?.标签?.length > 0 &&
+              {post?.tags &&
+                post?.tags?.length > 0 &&
                 post?.tags.map(t => (
                   <SmartLink
                     key={t}
