@@ -51,14 +51,13 @@ export const BlogItem = props => {
           {/* 文章信息 */}
           <header className='mb-5 text-md text-gray-700 dark:text-gray-300 flex-wrap flex leading-6'>
             <div className='space-x-2'>
-              {/* 已删除 AUTHOR 字段 */}
-
+              
               <span>
                 <SmartLink
                   className='p-1 hover:text-red-400 transition-all duration-200'
-                  href={`/archive#${formatDateFmt(post?.publishDate， 'yyyy-MM')}`}>
+                  href={`/archive#${formatDateFmt(post?.publishDate, 'yyyy-MM')}`}>
                   <i className='fa-regular fa-clock' />{' '}
-                  {post.date?.start_date || post.createdTime}
+                  {post。date?.start_date || post。createdTime}
                 </SmartLink>
               </span>
               <span>
@@ -68,7 +67,7 @@ export const BlogItem = props => {
 
             <div>
               {post。category && (
-                <SmartLink href={`/category/${post。category}`} className='p-1'>
+                <SmartLink href={`/category/${post.category}`} className='p-1'>
                   {' '}
                   <span className='hover:text-red-400 transition-all duration-200'>
                     <i className='fa-regular fa-folder mr-0.5' />
@@ -93,8 +92,7 @@ export const BlogItem = props => {
             {!showPreview && (
               <>
                 {post.summary}
-                {/* 这里的 V 可能是之前留下的测试代码，不影响功能 */}
-                {<span> V </span> && post.summary}
+                {post.summary && <span>...</span>}
               </>
             )}
             {showPreview && post?.blockMap && (
