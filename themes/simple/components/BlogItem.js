@@ -53,24 +53,22 @@ export const BlogItem = props => {
             <div className='space-x-2'>
               <span>
                 {' '}
-                <a
-                  
-                  className='p-1 hover:text-red-400 transition-all duration-200'>
-                    {!showPreview && (
-              <>
-                {post.author}
-                {post.author && <span>💗</span>}
-              </>
-            )}
-                  <i className='fa-regular fa-user'></i>
-                </a>
+                {post.author && (
+                <SmartLink href={`/author/${post.author}`} className='p-1'>
+                  {' '}
+                  <span className='hover:text-red-400 transition-all duration-200'>
+                    <i className='fa-regular fa-user' />
+                    {post。category}
+                  </span>
+                </SmartLink>
+              )}
               </span>
               <span>
                 <SmartLink
                   className='p-1 hover:text-red-400 transition-all duration-200'
                   href={`/archive#${formatDateFmt(post?.publishDate, 'yyyy-MM')}`}>
                   <i className='fa-regular fa-clock' />{' '}
-                  {post.date?.start_date || post.createdTime}
+                  {post。date?.start_date || post.createdTime}
                 </SmartLink>
               </span>
               <span>
