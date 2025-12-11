@@ -54,11 +54,11 @@ export const BlogItem = props => {
               <span>
                 {' '}
                 {post.author && (
-                <SmartLink href={`/archive#${post.author}`} className='p-1'>
+                <SmartLink href={`${post.author}`} className='p-1'>
                   {' '}
                   <span className='hover:text-red-400 transition-all duration-200'>
                     <i className='fa-regular fa-user' />
-                    {post.category}
+                    {post.author}
                   </span>
                 </SmartLink>
               )}
