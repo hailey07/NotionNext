@@ -51,35 +51,30 @@ export const BlogItem = props => {
           {/* 文章信息 */}
           <header className='mb-5 text-md text-gray-700 dark:text-gray-300 flex-wrap flex leading-6'>
             <div className='space-x-2'>
-              <span>
-                {' '}
-                
-              </span>
+
               <span>
                 <SmartLink
                   className='p-1 hover:text-red-400 transition-all duration-200'
                   href={`/archive#${formatDateFmt(post?.publishDate, 'yyyy-MM')}`}>
                   <i className='fa-regular fa-clock' />{' '}
-                  {post.date?.start_date || post.createdTime}
+                  {post。date?.start_date || post。createdTime}
                 </SmartLink>
               </span>
-              <span>
-                <TwikooCommentCount post={post} />
-              </span>
+
             </div>
 
             <div>
-              {post.category && (
+              {post。category && (
                 <SmartLink href={`/category/${post.category}`} className='p-1'>
                   {' '}
                   <span className='hover:text-red-400 transition-all duration-200'>
                     <i className='fa-regular fa-folder mr-0.5' />
-                    {post。category}
+                    {post.category}
                   </span>
                 </SmartLink>
               )}
-              {post?.tags &&
-                post?.tags?.length > 0 &&
+              {post?.标签 &&
+                post?.标签?.length > 0 &&
                 post?.tags.map(t => (
                   <SmartLink
                     key={t}
