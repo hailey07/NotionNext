@@ -52,24 +52,19 @@ export const BlogItem = props => {
           <header className='mb-5 text-md text-gray-700 dark:text-gray-300 flex-wrap flex leading-6'>
             <div className='space-x-2'>
               <span>
-               <i className='fa-regular fa-user'></i>
-                {post?.author &&
-                  post?.author?.length > 0 &&
-                  post?.author.map(t => (
-                    <SmartLink
-                      key={t}
-                      href={`/author/${t}`}
-                      className=' hover:text-red-400 transition-all duration-200'>
-                      <span> /{t}</span>
-                    </SmartLink>
-                  ))}
+                {' '}
+                <a
+                  href={siteConfig('SIMPLE_AUTHOR_LINK', null, CONFIG)}
+                  className='p-1 hover:text-red-400 transition-all duration-200'>
+                 
+                </a>
               </span>
               <span>
                 <SmartLink
                   className='p-1 hover:text-red-400 transition-all duration-200'
                   href={`/archive#${formatDateFmt(post?.publishDate, 'yyyy-MM')}`}>
                   <i className='fa-regular fa-clock' />{' '}
-                  {post。date?.start_date || post.createdTime}
+                  {post。date?.start_date || post。createdTime}
                 </SmartLink>
               </span>
               <span>
@@ -79,16 +74,16 @@ export const BlogItem = props => {
 
             <div>
               {post.category && (
-                <SmartLink href={`/category/${post.category}`} className='p-1'>
+                <SmartLink href={`/category/${post。category}`} className='p-1'>
                   {' '}
                   <span className='hover:text-red-400 transition-all duration-200'>
                     <i className='fa-regular fa-folder mr-0.5' />
-                    {post.category}
+                    {post。category}
                   </span>
                 </SmartLink>
               )}
               {post?.tags &&
-                post?.tags?.length > 0 &&
+                post?.标签?.length > 0 &&
                 post?.tags.map(t => (
                   <SmartLink
                     key={t}
