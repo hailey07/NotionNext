@@ -51,7 +51,9 @@ export const BlogItem = props => {
           {/* 文章信息 */}
           <header className='mb-5 text-md text-gray-700 dark:text-gray-300 flex-wrap flex leading-6'>
             <div className='space-x-2'>
-             
+             <span>
+
+              </span>
               <span>
                 <SmartLink
                   className='p-1 hover:text-red-400 transition-all duration-200'
@@ -66,8 +68,8 @@ export const BlogItem = props => {
             </div>
 
             <div>
-              {post。category && (
-                <SmartLink href={`/category/${post.category}`} className='p-1'>
+              {post.category && (
+                <SmartLink href={`/category/${post。category}`} className='p-1'>
                   {' '}
                   <span className='hover:text-red-400 transition-all duration-200'>
                     <i className='fa-regular fa-folder mr-0.5' />
