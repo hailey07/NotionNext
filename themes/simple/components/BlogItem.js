@@ -91,7 +91,7 @@ export const BlogItem = (props) => {
                 post?.tags.map((t) => (
                   <SmartLink
                     key={t}
-                    href={`/tag/${t}`}
+                    href={`/tag/ ${t}`}
                     className=" hover:text-red-400 transition-all duration-200"
                   >
                     <span>/ {t}</span>
