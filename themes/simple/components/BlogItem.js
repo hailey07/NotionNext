@@ -50,8 +50,8 @@ export const BlogItem = (props) => {
             </SmartLink>
           </h2>
           <main className="text-gray-700 dark:text-gray-300 leading-normal mb-6">
-            <span> v </span>
-            {!showPreview && <>{post.summary}</>}
+            <span>v </span>
+            {!showPreview && <>{post.summary} </>}
           </main>
 
           {/* 文章信息 */}
@@ -76,7 +76,7 @@ export const BlogItem = (props) => {
             </div>
 
             <div>
-              <span className="space-x-2">|</span>
+              <span>｜</span>
               {post.category && (
                 <SmartLink href={`/category/${post.category}`} className="p-1">
                   {" "}
@@ -94,7 +94,7 @@ export const BlogItem = (props) => {
                     href={`/tag/${t}`}
                     className=" hover:text-red-400 transition-all duration-200"
                   >
-                    <span> /{t}</span>
+                    <span>/{t}</span>
                   </SmartLink>
                 ))}
             </div>
