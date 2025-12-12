@@ -76,7 +76,7 @@ export const BlogItem = (props) => {
             </div>
 
             <div>
-              <span>┃</span>
+              <span>｜</span>
               {post.category && (
                 <SmartLink href={`/category/${post.category}`} className="p-1">
                   {" "}
