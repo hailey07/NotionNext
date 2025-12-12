@@ -33,12 +33,11 @@ export default function ArticleInfo (props) {
                 {post?.type !== 'Page' && (<div className=''>
                     <span className='mr-2'>|</span>
                     <span> <i className="fa-regular fa-clock"></i> {post?.publishDay}</span>
-                    <span>&nbsp;</span>
-                    <span className='mr-2'>|</span>
+                    <span>  ｜</span>
                     <span className='mx-2  dark:text-gray-500'>
                         {locale.COMMON.LAST_EDITED_TIME}: {post?.lastEditedDay}
                     </span>
-                    <span className='mr-2'>|</span>
+                    <span>｜</span>
                     <span className="hidden busuanzi_container_page_pv font-light mr-2">
                         <i className='mr-1 fas fa-eye' />
                         
