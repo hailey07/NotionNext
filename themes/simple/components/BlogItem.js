@@ -46,15 +46,18 @@ export const BlogItem = props => {
               )}
               {post.title}
             </SmartLink>
-            <span className='mb-2'>   | v </span>
+
+          </h2>
+
+          {/* 文章信息 */}
+          <main className='text-gray-700 dark:text-gray-300 leading-normal mb-6'>
             {!showPreview && (
               <>
                 {post.summary}
               </>
             )}
-          </h2>
 
-          {/* 文章信息 */}
+          </main>
           <header className='mb-5 text-md text-gray-700 dark:text-gray-300 flex-wrap flex leading-6'>
             <div className='space-x-2'>
              
