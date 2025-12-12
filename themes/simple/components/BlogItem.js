@@ -46,11 +46,10 @@ export const BlogItem = props => {
               )}
               {post.title}
             </SmartLink>
-            <span className='mb-2'>  | v </span>
+            <span className='mb-2'>   | v </span>
             {!showPreview && (
               <>
                 {post.summary}
-                {<span>...</span> && post.summary}
               </>
             )}
           </h2>
