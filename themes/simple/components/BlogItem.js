@@ -35,6 +35,7 @@ export const BlogItem = props => {
             </div>
           )}
         </div>
+
         <article className='article-info'>
           <h2 className='mb-2'>
             <SmartLink
@@ -53,9 +54,9 @@ export const BlogItem = props => {
               <span>
                 <SmartLink
                   className='p-1 hover:text-red-400 transition-all duration-200'
-                  href={`/archive#${formatDateFmt(post?.publishDate, 'yyyy-MM')}`}>
+                  href={`/archive#${formatDateFmt(post?.publishDate， 'yyyy-MM')}`}>
                   <i className='fa-regular fa-clock' />{' '}
-                  {post。date?.start_date || post。createdTime}
+                  {post.date?.start_date || post.createdTime}
                 </SmartLink>
               </span>
               <span>
@@ -64,16 +65,16 @@ export const BlogItem = props => {
             </div>
 
             <div>
-              {post.category && (
+              {post。category && (
                 <SmartLink href={`/category/${post.category}`} className='p-1'>
                   {' '}
                   <span className='hover:text-red-400 transition-all duration-200'>
                     <i className='fa-regular fa-folder mr-0.5' />
-                    {post。category}
+                    {post.category}
                   </span>
                 </SmartLink>
               )}
-              {post?.标签 &&
+              {post?.tags &&
                 post?.tags?.length > 0 &&
                 post?.tags.map(t => (
                   <SmartLink
@@ -103,6 +104,14 @@ export const BlogItem = props => {
         </article>
       </div>
 
+      <div className='block'>
+        <SmartLink
+          href={post.href}
+          className='inline-block rounded-sm text-blue-600 dark:text-blue-300  text-xs dark:border-gray-800 border hover:text-red-400 transition-all duration-200 hover:border-red-300 h-9 leading-8 px-5'>
+          Continue Reading{' '}
+          <i className='fa-solid fa-angle-right align-middle'></i>
+        </SmartLink>
+      </div>
     </div>
   )
 }
