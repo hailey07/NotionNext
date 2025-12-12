@@ -21,7 +21,7 @@ export default function ArticleInfo(props) {
                 className="blog-item-title mb-5 font-bold text-black text-xl md:text-2xl no-underline" >
         { siteConfig('POST_TITLE_ICON') && <NotionIcon icon={ post?.pageIcon } />
 } { post?.title }
-</h2>
+</h2 >
 
     < div className = 'flex flex-wrap text-gray-700 dark:text-gray-300' >
         { post?.输入 !== 'Page' && (
