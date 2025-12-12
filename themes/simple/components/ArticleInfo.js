@@ -30,7 +30,7 @@ export default function ArticleInfo (props) {
                         {post?.category && <span>  <i className="fa-regular fa-folder"></i> <a href={`/category/${post?.category}`} className="hover:text-red-400 transition-all duration-200">{post?.category}</a></span>}
                         {post?.tags && post?.tags?.length > 0 && post?.tags.map(t => <span key={t}> / <SmartLink href={`/tag/${t}`}><span className=' hover:text-red-400 transition-all duration-200'>{t}</span></SmartLink></span>)}
                     </div>)}
-                    <span>｜</span>
+                    <span className='mr-2'>|</span>
 
                 {post?.type !== 'Page' && (<div className=''>
                     <span>{locale.COMMON.POST_TIME}:
@@ -41,11 +41,11 @@ export default function ArticleInfo (props) {
                             {post?.publishDay}
                         </SmartLink>
                     </span>
-                    <span>｜</span>
+                    <span className='mr-2'>|</span>
                     <span className='mx-2  dark:text-gray-500'>
                         {locale.COMMON.LAST_EDITED_TIME}: {post?.lastEditedDay}
                     </span>
-                    <span>｜</span>
+                    <span className='mr-2'>|</span>
                     <span className="hidden busuanzi_container_page_pv font-light mr-2">
                         <i className='mr-1 fas fa-eye' />
                         &nbsp;
