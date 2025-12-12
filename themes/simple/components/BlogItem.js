@@ -47,20 +47,12 @@ export const BlogItem = (props) => {
                 <NotionIcon icon={post.pageIcon} />
               )}
               {post.title}
-              <span> ｜v </span>
-              {!showPreview && <>{post.summary}</>}
             </SmartLink>
-            <main className="text-gray-700 dark:text-gray-300 leading-normal mb-6">
-              <span> ｜v </span>
-              {!showPreview && <>{post.summary}</>}
-              {showPreview && post?.blockMap && (
-                <div className="overflow-ellipsis truncate">
-                  <NotionPage post={post} />
-                  <hr className="border-dashed py-4" />
-                </div>
-              )}
-            </main>
           </h2>
+          <main className="text-gray-700 dark:text-gray-300 leading-normal mb-6">
+            <span> v </span>
+            {!showPreview && <>{post.summary}</>}
+          </main>
 
           {/* 文章信息 */}
 
