@@ -94,7 +94,7 @@ export const BlogItem = (props) => {
                     href={`/tag/${t}`}
                     className=" hover:text-red-400 transition-all duration-200"
                   >
-                    <span>/{t}</span>
+                    <span>/ {t}</span>
                   </SmartLink>
                 ))}
             </div>
