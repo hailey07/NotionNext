@@ -67,7 +67,7 @@ const SocialButton = () => {
           <a
             target='_blank'
             rel='noreferrer'
-            title={'email'}
+            title={'E-mail'}
             href={`mailto:${siteConfig('CONTACT_EMAIL')}`}>
             <i className='fas fa-envelope transform hover:scale-125 duration-150' />
           </a>
@@ -94,7 +94,7 @@ const SocialButton = () => {
           <a
             target='_blank'
             rel='noreferrer'
-            title={'youtube'}
+            title={'Youtube'}
             href={siteConfig('CONTACT_YOUTUBE')}>
             <i className='fab fa-youtube transform hover:scale-125 duration-150' />
           </a>
@@ -103,7 +103,7 @@ const SocialButton = () => {
           <a
             target='_blank'
             rel='noreferrer'
-            title={'threads'}
+            title={'Threads'}
             href={siteConfig('CONTACT_THREADS')}>
             <i className='fab fa-threads transform hover:scale-125 duration-150' />
           </a>
@@ -112,7 +112,7 @@ const SocialButton = () => {
           <a
             target='_blank'
             rel='noreferrer'
-            title={'threads'}
+            title={'Gumroad'}
             href={siteConfig('CONTACT_GUMROAD')}>
             <i className='fab fa-gofore transform hover:scale-125 duration-150' />
           </a>
