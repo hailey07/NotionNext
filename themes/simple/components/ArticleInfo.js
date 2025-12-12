@@ -25,22 +25,13 @@ export default function ArticleInfo (props) {
             <div className='flex flex-wrap text-gray-700 dark:text-gray-300'>
                 {post?.type !== 'Page' && (
                     <div className="space-x-3 mr-4">
-                       
                         
-                        {post?.category && <span>  <i className="fa-regular fa-folder"></i> <a href={`/category/${post?.category}`} className="hover:text-red-400 transition-all duration-200">{post?.category}</a></span>}
                         {post?.tags && post?.tags?.length > 0 && post?.tags.map(t => <span key={t}> / <SmartLink href={`/tag/${t}`}><span className=' hover:text-red-400 transition-all duration-200'>{t}</span></SmartLink></span>)}
                     </div>)}
-                    <span className='mr-2'>|</span>
 
-                {post?.type !== 'Page' && (<div className=''>
-                    <span>{locale.COMMON.POST_TIME}:
-                        <SmartLink
-                            href={`/archive#${formatDateFmt(post?.publishDate, 'yyyy-MM')}`}
-                            passHref
-                            className="pl-1 mr-2 cursor-pointer hover:text-gray-700 dark:hover:text-gray-200 border-b dark:border-gray-500 border-dashed">
-                            {post?.publishDay}
-                        </SmartLink>
-                    </span>
+                    <span className='mr-2'>|</span>
+                    <span> <i className="fa-regular fa-clock"></i> {post?.publishDay}</span>
+                    {post?.category && <span>  <i className="fa-regular fa-folder"></i> <a href={`/category/${post?.category}`} className="hover:text-red-400 transition-all duration-200">{post?.category}</a></span>}
                     <span className='mr-2'>|</span>
                     <span className='mx-2  dark:text-gray-500'>
                         {locale.COMMON.LAST_EDITED_TIME}: {post?.lastEditedDay}
