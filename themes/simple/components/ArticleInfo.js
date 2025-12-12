@@ -42,7 +42,7 @@ export default function ArticleInfo(props) {
                 <span key={t}>
                   {" "}
                   /{" "}
-                  <SmartLink href={`/tag / ${t} `}>
+                  <SmartLink href={`/tag/ ${t} `}>
                     <span className=" hover:text-red-400 transition-all duration-200">
                       {t}
                     </span>
