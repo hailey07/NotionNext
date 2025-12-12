@@ -45,25 +45,18 @@ export const BlogItem = props => {
                 <NotionIcon icon={post.pageIcon} />
               )}
               {post.title}
-            </SmartLink>
-
-          </h2>
-
-          {/* 文章信息 */}
-          <main className='text-gray-700 dark:text-gray-300 leading-normal mb-6'>
-           <span>v </span>
+              <span>    ｜v </span>
             {!showPreview && (
               <>
                 {post.summary}
               </>
             )}
-            {showPreview && post?.blockMap && (
-              <div className='overflow-ellipsis truncate'>
-                <NotionPage post={post} />
-                <hr className='border-dashed py-4' />
-              </div>
-            )}
-          </main>
+            </SmartLink>
+
+          </h2>
+
+          {/* 文章信息 */}
+         
           <header className='mb-5 text-md text-gray-700 dark:text-gray-300 flex-wrap flex leading-6'>
             <div className='space-x-2'>
              
@@ -72,7 +65,7 @@ export const BlogItem = props => {
                   className='p-1 hover:text-red-400 transition-all duration-200'
                   href={`/archive#${formatDateFmt(post?.publishDate, 'yyyy-MM')}`}>
                   <i className='fa-regular fa-clock' />{' '}
-                  {post.date?.start_date || post.createdTime}
+                  {post。date?.start_date || post.createdTime}
                 </SmartLink>
               </span>
               <span>
