@@ -46,6 +46,13 @@ export const BlogItem = props => {
               )}
               {post.title}
             </SmartLink>
+            <span className='mb-2'>|</span>
+            {!showPreview && (
+              <>
+                {post.summary}
+                {<span>...</span> && post.summary}
+              </>
+            )}
           </h2>
 
           {/* 文章信息 */}
@@ -88,31 +95,7 @@ export const BlogItem = props => {
                 ))}
             </div>
           </header>
-
-          <main className='text-gray-700 dark:text-gray-300 leading-normal mb-6'>
-            {!showPreview && (
-              <>
-                {post.summary}
-                {post.summary && <span>...</span>}
-              </>
-            )}
-            {showPreview && post?.blockMap && (
-              <div className='overflow-ellipsis truncate'>
-                <NotionPage post={post} />
-                <hr className='border-dashed py-4' />
-              </div>
-            )}
-          </main>
         </article>
-      </div>
-
-      <div className='block'>
-        <SmartLink
-          href={post.href}
-          className='inline-block rounded-sm text-blue-600 dark:text-blue-300  text-xs dark:border-gray-800 border hover:text-red-400 transition-all duration-200 hover:border-red-300 h-9 leading-8 px-5'>
-          Continue Reading{' '}
-          <i className='fa-solid fa-angle-right align-middle'></i>
-        </SmartLink>
       </div>
     </div>
   )
