@@ -45,14 +45,14 @@ export const BlogItem = props => {
                 <NotionIcon icon={post.pageIcon} />
               )}
               {post.title}
-              <span>    ｜v </span>
+            
+            </SmartLink>
+  <span>    ｜v </span>
             {!showPreview && (
               <>
                 {post.summary}
               </>
             )}
-            </SmartLink>
-
           </h2>
 
           {/* 文章信息 */}
@@ -74,7 +74,7 @@ export const BlogItem = props => {
             </div>
 
             <div>
-                  <span className='space-x-2'>|</span>
+                  <span> | </span>
               {post.category && (
                 <SmartLink href={`/category/${post.category}`} className='p-1'>
                   {' '}
