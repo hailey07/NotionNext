@@ -51,10 +51,10 @@ export const BlogItem = props => {
 
           {/* 文章信息 */}
           <main className='text-gray-700 dark:text-gray-300 leading-normal mb-6'>
+           <span>v </span>
             {!showPreview && (
               <>
                 {post.summary}
-
               </>
             )}
             {showPreview && post?.blockMap && (
