@@ -13,7 +13,7 @@ export const BlogItem = props => {
   const { NOTION_CONFIG } = useGlobal()
   const showPageCover = siteConfig('SIMPLE_POST_COVER_ENABLE', false, CONFIG)
   const showPreview =
-    siteConfig('POST_LIST_PREVIEW', false, NOTION_CONFIG) && post.blockMap
+    siteConfig('POST_LIST_PREVIEW', false, NOTION_CONFIG)
 
   return (
     <div
@@ -47,18 +47,18 @@ export const BlogItem = props => {
               {post.title}
             </SmartLink>
           </h2>
+          <main className='text-gray-700 dark:text-gray-300 leading-normal mb-6'>
+            <span>v </span>
+            {!showPreview && (
+              <>
+                {post.summary}
+              </>
+            )}
+          </main>
 
           {/* 文章信息 */}
           <header className='mb-5 text-md text-gray-700 dark:text-gray-300 flex-wrap flex leading-6'>
             <div className='space-x-2'>
-              <span>
-                {' '}
-                <a
-                  href={siteConfig('SIMPLE_AUTHOR_LINK', null, CONFIG)}
-                  className='p-1 hover:text-red-400 transition-all duration-200'>
-                  <i className='fa-regular fa-user'></i> {siteConfig('AUTHOR')}
-                </a>
-              </span>
               <span>
                 <SmartLink
                   className='p-1 hover:text-red-400 transition-all duration-200'
@@ -73,6 +73,7 @@ export const BlogItem = props => {
             </div>
 
             <div>
+              <span>｜</span>
               {post.category && (
                 <SmartLink href={`/category/${post.category}`} className='p-1'>
                   {' '}
@@ -94,31 +95,7 @@ export const BlogItem = props => {
                 ))}
             </div>
           </header>
-
-          <main className='text-gray-700 dark:text-gray-300 leading-normal mb-6'>
-            {!showPreview && (
-              <>
-                {post.summary}
-                {post.summary && <span>...</span>}
-              </>
-            )}
-            {showPreview && post?.blockMap && (
-              <div className='overflow-ellipsis truncate'>
-                <NotionPage post={post} />
-                <hr className='border-dashed py-4' />
-              </div>
-            )}
-          </main>
         </article>
-      </div>
-
-      <div className='block'>
-        <SmartLink
-          href={post.href}
-          className='inline-block rounded-sm text-blue-600 dark:text-blue-300  text-xs dark:border-gray-800 border hover:text-red-400 transition-all duration-200 hover:border-red-300 h-9 leading-8 px-5'>
-          Continue Reading{' '}
-          <i className='fa-solid fa-angle-right align-middle'></i>
-        </SmartLink>
       </div>
     </div>
   )
