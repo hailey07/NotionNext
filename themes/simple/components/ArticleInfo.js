@@ -26,7 +26,7 @@ export default function ArticleInfo (props) {
                 {post?.type !== 'Page' && (
                     <div className="space-x-3 mr-4">
                        
-                        <span> <i className="fa-regular fa-clock"></i> {post?.publishDay}</span>
+                        
                         {post?.category && <span>  <i className="fa-regular fa-folder"></i> <a href={`/category/${post?.category}`} className="hover:text-red-400 transition-all duration-200">{post?.category}</a></span>}
                         {post?.tags && post?.tags?.length > 0 && post?.tags.map(t => <span key={t}> / <SmartLink href={`/tag/${t}`}><span className=' hover:text-red-400 transition-all duration-200'>{t}</span></SmartLink></span>)}
                     </div>)}
