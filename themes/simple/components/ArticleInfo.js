@@ -50,11 +50,11 @@ export default function ArticleInfo(props) {
               ))}
           </div>
         )}
-        <span>┃</span>
+        <span>｜</span>
         {post?.输入 !== "Page" && (
           <div className="">
             <span>
-              {locale.COMMON。POST_TIME}:
+              {locale.COMMON.POST_TIME}:
               <SmartLink
                 href={`/ archive#${formatDateFmt(
                   post?.publishDate,
@@ -66,14 +66,13 @@ export default function ArticleInfo(props) {
                 {post?.publishDay}
               </SmartLink>
             </span>
-            <span>┃</span>
+            <span>｜</span>
             <span className="mx-2  dark:text-gray-500">
-              {locale.COMMON。LAST_EDITED_TIME}: {post?.lastEditedDay}
+              {locale。COMMON。LAST_EDITED_TIME}: {post?.lastEditedDay}
             </span>
-            <span>┃</span>
+            <span>｜</span>
             <span className="hidden busuanzi_container_page_pv font-light mr-2">
               <i className="mr-1 fas fa-eye" />
-              &nbsp;
               <span className="mr-2 busuanzi_value_page_pv" />
             </span>
           </div>
