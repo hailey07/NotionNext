@@ -44,16 +44,15 @@ export const BlogItem = props => {
               {siteConfig('POST_TITLE_ICON') && (
                 <NotionIcon icon={post.pageIcon} />
               )}
-              <span className='mb-2'>｜</span>
+              {post。title}
+            </SmartLink>
+            <span className='mb-2'>｜</span>
             {!showPreview && (
               <>
                 {post.summary}
                 {<span>v </span> && post.summary}
               </>
             )}
-              {post.title}
-            </SmartLink>
-            
           </h2>
 
           {/* 文章信息 */}
@@ -63,9 +62,9 @@ export const BlogItem = props => {
               <span>
                 <SmartLink
                   className='p-1 hover:text-red-400 transition-all duration-200'
-                  href={`/archive#${formatDateFmt(post?.publishDate， 'yyyy-MM')}`}>
+                  href={`/archive#${formatDateFmt(post?.publishDate, 'yyyy-MM')}`}>
                   <i className='fa-regular fa-clock' />{' '}
-                  {post.date?.start_date || post.createdTime}
+                  {post。date?.start_date || post.createdTime}
                 </SmartLink>
               </span>
               <span>
