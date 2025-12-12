@@ -44,13 +44,13 @@ export const BlogItem = props => {
               {siteConfig('POST_TITLE_ICON') && (
                 <NotionIcon icon={post.pageIcon} />
               )}
-              {post。title}
+              {post.title}
             </SmartLink>
-            <span className='mb-2'>｜</span>
+            <span className='mb-2'>  | v </span>
             {!showPreview && (
               <>
                 {post.summary}
-                {<span>v </span> && post.summary}
+                {<span>...</span> && post.summary}
               </>
             )}
           </h2>
