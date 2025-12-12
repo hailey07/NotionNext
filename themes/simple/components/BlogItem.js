@@ -66,6 +66,7 @@ export const BlogItem = props => {
             </div>
 
             <div>
+                  <span className='space-x-2'>|</span>
               {post.category && (
                 <SmartLink href={`/category/${post.category}`} className='p-1'>
                   {' '}
